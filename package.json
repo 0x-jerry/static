@@ -1,6 +1,9 @@
 {
-  "name": "static",
-  "version": "1.0.0",
+  "name": "@0x-jerry/static",
+  "version": "0.0.1",
+  "files": [
+    "images"
+  ],
   "description": "",
   "scripts": {
     "optimize": "node scripts/optimize.mjs"
