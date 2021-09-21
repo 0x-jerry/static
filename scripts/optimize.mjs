@@ -45,7 +45,7 @@ async function resolveImage(file) {
 
   await image.encode({
     mozjpeg: {
-      quality: 90,
+      quality: 75,
       baseline: false,
       arithmetic: false,
       progressive: true,
