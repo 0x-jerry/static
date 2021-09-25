@@ -25,13 +25,17 @@ async function main() {
 
       const newFile = await resolveImage(file)
 
-      const outputImgPath = r('images', p), newFile
+      const outputImgPath = r('images', p)
       await fs.writeFile(outputImgPath, newFile)
 
       const outputStat = await fs.stat(outputImgPath)
       const outputKb = outputStat.size / 1024
 
-      console.log('resolve success:', p,'reduce size:', originKb + 'kb ->', outputKb, 'kb')
+      console.log(
+        `resolve success: ${p}, reduce size: ${originKb.toFixed(
+          0
+        )}Kb -> ${outputKb.toFixed(0)}Kb`
+      )
     } catch (error) {
       console.error('resolve failed:', p)
     }
