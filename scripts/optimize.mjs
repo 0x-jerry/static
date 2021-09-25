@@ -17,14 +17,21 @@ async function main() {
 
   const p = images.map(async (p) => {
     try {
-      const file = await fs.readFile(r('upload', p))
+      const imgPath = r('upload', p)
+      const file = await fs.readFile(imgPath)
+      const stat = await fs.stat(imgPath)
+
+      const originKb = stat.size / 1024
 
       const newFile = await resolveImage(file)
 
-      await fs.writeFile(r('images', p), newFile)
-      await fs.unlink(r('upload', p))
+      const outputImgPath = r('images', p), newFile
+      await fs.writeFile(outputImgPath, newFile)
 
-      console.log('resolve success:', p)
+      const outputStat = await fs.stat(outputImgPath)
+      const outputKb = outputStat.size / 1024
+
+      console.log('resolve success:', p,'reduce size:', originKb + 'kb ->', outputKb, 'kb')
     } catch (error) {
       console.error('resolve failed:', p)
     }
