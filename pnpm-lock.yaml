@@ -2,11 +2,15 @@ lockfileVersion: 5.3
 
 specifiers:
   '@squoosh/lib': ^0.4.0
+  '@types/node': ^16.10.3
   fast-glob: ^3.2.7
 
 dependencies:
   '@squoosh/lib': registry.nlark.com/@squoosh/lib/0.4.0
   fast-glob: registry.nlark.com/fast-glob/3.2.7
+
+devDependencies:
+  '@types/node': registry.npmmirror.com/@types/node/16.10.3
 
 packages:
 
@@ -184,3 +188,9 @@ packages:
     version: 3.1.1
     engines: {node: '>= 8'}
     dev: false
+
+  registry.npmmirror.com/@types/node/16.10.3:
+    resolution: {integrity: sha1-eo8oOGA+oxTR0iuzFx2JnhXFe9U=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/download/@types/node-16.10.3.tgz?cache=0&sync_timestamp=1633607711064&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.10.3.tgz}
+    name: '@types/node'
+    version: 16.10.3
+    dev: true
