@@ -6,7 +6,8 @@
   ],
   "description": "",
   "scripts": {
-    "optimize": "node scripts/optimize.mjs"
+    "optimize": "node scripts/optimize.mjs",
+    "release": "sh scripts/release.sh"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
