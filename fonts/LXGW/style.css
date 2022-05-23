@@ -1,5 +1,11 @@
 @font-face {
   font-family: LXGW;
-  src: url('./LXGWWenKaiMono-Regular.woff2') format('woff2'),
-    url('./LXGWWenKaiMono-Regular.woff') format('woff');
+  font-weight: 400;
+
+  src: local('sans-serif'),
+    url('//cdn.jsdelivr.net/gh/0x-jerry/static/fonts/LXGW/LXGWWenKaiMono-Regular.woff2')
+      format('woff2'),
+    url('//cdn.jsdelivr.net/gh/0x-jerry/static/fonts/LXGW/LXGWWenKaiMono-Regular.woff')
+      format('woff');
+  font-display: swap;
 }
